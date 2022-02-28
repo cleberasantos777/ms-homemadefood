@@ -32,6 +32,14 @@ public class CustomerEntity extends PartnerEntity {
 
 	public void setPartnerType(String partnerType) {
 		this.partnerType = partnerType;
-	}		
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}	
 	
 }
