@@ -2,18 +2,21 @@ package com.gunnerapis.hfpartners.entities;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.Table;
 
-@MappedSuperclass
-public abstract class PartnerEntity implements Serializable {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+@Entity
+@Table(name = "hf_partners")
+public class PartnerEntity implements Serializable {
+
 	private static final long serialVersionUID = 1L;
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 	public String name;
 	public String address;
 	public String phone;
@@ -21,20 +24,16 @@ public abstract class PartnerEntity implements Serializable {
 	public String city;
 	public String district;
 	public String reference;
+	private String partnerType;
 	
 	public PartnerEntity() {
 
-	}	
-	
-	public PartnerEntity(String name, String city) {
-		super();
-		this.name = name;
-		this.city = city;
 	}
 
-	public PartnerEntity(String name, String address, String phone, String postalCode, String city, String district,
-			String reference) {
+	public PartnerEntity(Long id, String name, String address, String phone, String postalCode, String city,
+			String district, String reference, String partnerType) {
 		super();
+		this.id = id;
 		this.name = name;
 		this.address = address;
 		this.phone = phone;
@@ -42,6 +41,15 @@ public abstract class PartnerEntity implements Serializable {
 		this.city = city;
 		this.district = district;
 		this.reference = reference;
+		this.partnerType = partnerType;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getName() {
@@ -99,5 +107,13 @@ public abstract class PartnerEntity implements Serializable {
 	public void setReference(String reference) {
 		this.reference = reference;
 	}
+
+	public String getPartnerType() {
+		return partnerType;
+	}
+
+	public void setPartnerType(String partnerType) {
+		this.partnerType = partnerType;
+	}	
 
 }
