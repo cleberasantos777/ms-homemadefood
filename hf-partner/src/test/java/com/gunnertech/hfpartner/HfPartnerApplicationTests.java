@@ -1,4 +1,4 @@
-package com.gunnerapis.hfpartner;
+package com.gunnertech.hfpartner;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

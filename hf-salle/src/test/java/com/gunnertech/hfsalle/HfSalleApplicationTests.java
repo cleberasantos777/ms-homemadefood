@@ -1,10 +1,10 @@
-package com.gunnerapis.salles;
+package com.gunnertech.hfsalle;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class HfSallesApplicationTests {
+class HfSalleApplicationTests {
 
 	@Test
 	void contextLoads() {

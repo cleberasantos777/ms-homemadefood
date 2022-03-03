@@ -1,4 +1,4 @@
-package com.gunnerapis.hfinventory;
+package com.gunnertech.hfinventory;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
